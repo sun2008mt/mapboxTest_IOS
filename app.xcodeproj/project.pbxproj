@@ -14,6 +14,8 @@
 		49483CB41FAFECFF006DF06C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49483CB21FAFECFF006DF06C /* LaunchScreen.storyboard */; };
 		49483CBF1FAFED00006DF06C /* appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49483CBE1FAFED00006DF06C /* appTests.swift */; };
 		49483CCA1FAFED00006DF06C /* appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49483CC91FAFED00006DF06C /* appUITests.swift */; };
+		49483CD91FAFF198006DF06C /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49483CD81FAFF198006DF06C /* Mapbox.framework */; };
+		49483CDA1FAFF198006DF06C /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49483CD81FAFF198006DF06C /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		49483CDB1FAFF198006DF06C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				49483CDA1FAFF198006DF06C /* Mapbox.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		49483CA61FAFECFF006DF06C /* app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49483CA91FAFECFF006DF06C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +63,7 @@
 		49483CC51FAFED00006DF06C /* appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49483CC91FAFED00006DF06C /* appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appUITests.swift; sourceTree = "<group>"; };
 		49483CCB1FAFED00006DF06C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49483CD81FAFF198006DF06C /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49483CD91FAFF198006DF06C /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +95,7 @@
 		49483C9D1FAFECFF006DF06C = {
 			isa = PBXGroup;
 			children = (
+				49483CD81FAFF198006DF06C /* Mapbox.framework */,
 				49483CA81FAFECFF006DF06C /* app */,
 				49483CBD1FAFED00006DF06C /* appTests */,
 				49483CC81FAFED00006DF06C /* appUITests */,
@@ -135,6 +154,8 @@
 				49483CA21FAFECFF006DF06C /* Sources */,
 				49483CA31FAFECFF006DF06C /* Frameworks */,
 				49483CA41FAFECFF006DF06C /* Resources */,
+				49483CDB1FAFF198006DF06C /* Embed Frameworks */,
+				49483CD71FAFF020006DF06C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -253,6 +274,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49483CD71FAFF020006DF06C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		49483CA21FAFECFF006DF06C /* Sources */ = {
@@ -428,7 +465,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3CBZ8Z3F6P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = app/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.whu.sun.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,7 +485,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3CBZ8Z3F6P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = app/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.whu.sun.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
