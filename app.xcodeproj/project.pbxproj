@@ -16,6 +16,7 @@
 		49483CCA1FAFED00006DF06C /* appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49483CC91FAFED00006DF06C /* appUITests.swift */; };
 		49483CD91FAFF198006DF06C /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49483CD81FAFF198006DF06C /* Mapbox.framework */; };
 		49483CDA1FAFF198006DF06C /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49483CD81FAFF198006DF06C /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		49483CDD1FB0029F006DF06C /* third_party_vector_style.json in Resources */ = {isa = PBXBuildFile; fileRef = 49483CDC1FB0029F006DF06C /* third_party_vector_style.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		49483CC91FAFED00006DF06C /* appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appUITests.swift; sourceTree = "<group>"; };
 		49483CCB1FAFED00006DF06C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49483CD81FAFF198006DF06C /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
+		49483CDC1FB0029F006DF06C /* third_party_vector_style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = third_party_vector_style.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		49483C9D1FAFECFF006DF06C = {
 			isa = PBXGroup;
 			children = (
+				49483CDC1FB0029F006DF06C /* third_party_vector_style.json */,
 				49483CD81FAFF198006DF06C /* Mapbox.framework */,
 				49483CA81FAFECFF006DF06C /* app */,
 				49483CBD1FAFED00006DF06C /* appTests */,
@@ -254,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49483CB41FAFECFF006DF06C /* LaunchScreen.storyboard in Resources */,
+				49483CDD1FB0029F006DF06C /* third_party_vector_style.json in Resources */,
 				49483CB11FAFECFF006DF06C /* Assets.xcassets in Resources */,
 				49483CAF1FAFECFF006DF06C /* Main.storyboard in Resources */,
 			);
